@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogg — justaleks.no (demo)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="demo-bar">
+      <span class="dot"></span>
+      Live frontend-demo — under arbeid 🚧
+    </div>
+
+    <div class="wrap" id="listView">
+      <a
+        href="#"
+        class="back-link"
+        style="margin-top: 24px"
+        onclick="return false;"
+      >
+        <svg viewBox="0 0 24 24">
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12,19 5,12 12,5" />
+        </svg>
+        Tilbake til portefølje
+      </a>
+
+      <header class="blog-header">
+        <span class="label">[ Blogg ]</span>
+        <h1 class="blog-title">Notater<br /><em>fra verkstedet.</em></h1>
+        <p class="blog-desc">
+          Korte og lange tekster om det jeg bygger — kode, prosjekter, og ting
+          jeg har lært på veien.
+        </p>
+      </header>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="kode">Kode</button>
+        <button class="filter-btn" data-filter="prosjekt">Prosjekt</button>
+        <button class="filter-btn" data-filter="notat">Notat</button>
+      </div>
+
+      <div class="post-list" id="postList"></div>
+    </div>
+
+    <div class="wrap-narrow" id="postView" style="display: none">
+      <a href="#" class="back-link" style="margin-top: 24px" id="backToList">
+        <svg viewBox="0 0 24 24">
+          <line x1="19" y1="12" x2="5" y2="12" />
+          <polyline points="12,19 5,12 12,5" />
+        </svg>
+        Tilbake til blogg
+      </a>
+      <div id="postRoot"></div>
+    </div>
+
+    <footer class="blog-footer">
+      <div class="wrap">
+        <p>© 2025 Aleks — Oslo, NO</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
